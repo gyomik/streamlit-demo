@@ -4,7 +4,7 @@ import streamlit as st
 
 #c = st.container()
 
-#df = pd.read_csv("nasdaq100.csv")
+df = pd.read_csv("nasdaq100.csv")
 #share_sym = df.symbols.tolist()
 
 
