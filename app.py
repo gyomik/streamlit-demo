@@ -2,7 +2,7 @@ import pandas as pd
 import yfinance as yf
 import streamlit as st
 
-c = st.empty()
+c = st.container()
 
 share = st.text_input("Input share to check", "GOOG")
 date_start = st.date_input('start date')
