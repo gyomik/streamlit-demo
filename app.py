@@ -4,6 +4,8 @@ import streamlit as st
 
 #c = st.container()
 
+st.title('Online stock checker for Leo')
+
 df = pd.read_csv("nasdaq100.csv")
 share_sym = df.symbol.tolist()
 share_sym.append('TSLA')
