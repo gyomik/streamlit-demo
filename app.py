@@ -1,5 +1,6 @@
 import pandas as pd
 import yfinance as yf
+import streamlit as st
 
 user_input = st.text_input("Input share to check", "GOOG")
 
