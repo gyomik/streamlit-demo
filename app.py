@@ -14,5 +14,5 @@ data = yf.download(share,start=date_start,end=date_end)
 st.area_chart(data.Open)
 
 #top.write("Showing share data for",share,"between",\
-         str(date_start),"and",str(date_end))
+#         str(date_start),"and",str(date_end))
 
