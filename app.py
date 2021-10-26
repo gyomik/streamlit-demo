@@ -4,8 +4,8 @@ import streamlit as st
 
 #c = st.container()
 
-df = pd.read_csv("nasdaq100.csv")
-share_sym = df.symbols.tolist()
+#df = pd.read_csv("nasdaq100.csv")
+#share_sym = df.symbols.tolist()
 
 
 share = st.text_input("Input share to check", "GOOG")
