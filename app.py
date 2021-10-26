@@ -5,10 +5,10 @@ import streamlit as st
 #c = st.container()
 
 df = pd.read_csv("nasdaq100.csv")
-#share_sym = df.symbol.tolist()
+share_sym = df.symbol.tolist()
 
-
-share = st.text_input("Input share to check", "GOOG")
+#share = st.text_input("Input share to check", "GOOG")
+share = st.selectbox("Input share to check", share_sym)
 date_start = st.date_input('start date')
 date_end = st.date_input('end date')
 
