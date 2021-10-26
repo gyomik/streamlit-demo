@@ -13,6 +13,6 @@ data = yf.download(share,start=date_start,end=date_end)
 #clicked = st.button("Click me")
 st.area_chart(data.Open)
 
-top.write("Showing share data for",share,"between",\
+#top.write("Showing share data for",share,"between",\
          str(date_start),"and",str(date_end))
 
