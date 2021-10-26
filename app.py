@@ -6,6 +6,8 @@ import streamlit as st
 
 df = pd.read_csv("nasdaq100.csv")
 share_sym = df.symbol.tolist()
+share_sym.append('TSLA')
+share_sym.sort()
 
 #share = st.text_input("Input share to check", "GOOG")
 share = st.selectbox("Input share to check", share_sym)
