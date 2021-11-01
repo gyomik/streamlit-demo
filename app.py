@@ -28,7 +28,7 @@ st.area_chart(data.Open)
 st.write("Showing share data for",share,"between",\
          str(date_start),"and",str(date_end))
 
-st.write("And now trying out Pydeck below from example")
+st.markdown("*And now trying out Pydeck below from example*")
 
 df = pd.DataFrame(
          np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
@@ -40,4 +40,4 @@ deck = pdk.Deck(map_style='mapbox://styles/mapbox/light-v9',
 lys=[pdk.Layer('HexagonLayer',data=df,get_position='[lon, lat]',radius=200,elevation_scale=4,elevation_range=[0, 1000],pickable=True,extruded=True),
         pdk.Layer('ScatterplotLayer',data=df,get_position='[lon, lat]',get_color='[200, 30, 0, 160]',get_radius=200)]
                 
-st.pydeck_chart(deck,lys)
+st.pydeck_chart(deck,layers = lys)
