@@ -29,15 +29,18 @@ st.write("Showing share data for",share,"between",\
          str(date_start),"and",str(date_end))
 
 st.markdown("*And now trying out Pydeck below from example*")
+st.write("(Taken and modified from documentation https://docs.streamlit.io/library/api-reference/charts/st.pydeck_chart)")
+
 
 df = pd.DataFrame(
          np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
          columns=['lat', 'lon'])
 
-deck = pdk.Deck(map_style='mapbox://styles/mapbox/light-v9',
-                initial_view_state=pdk.ViewState(latitude=37.76,longitude=-122.4,zoom=11,pitch=50))
-                
 lys=[pdk.Layer('HexagonLayer',data=df,get_position='[lon, lat]',radius=200,elevation_scale=4,elevation_range=[0, 1000],pickable=True,extruded=True),
         pdk.Layer('ScatterplotLayer',data=df,get_position='[lon, lat]',get_color='[200, 30, 0, 160]',get_radius=200)]
+
+deck = pdk.Deck(map_style='mapbox://styles/mapbox/light-v9',
+                initial_view_state=pdk.ViewState(latitude=37.76,longitude=-122.4,zoom=11,pitch=50),
+                layer = lys)
                 
-st.pydeck_chart(deck,layers = lys)
+st.pydeck_chart(deck)
