@@ -17,7 +17,7 @@ share_sym.sort()
 #share = st.text_input("Input share to check", "GOOG")
 share = st.selectbox("Input share to check", share_sym)
 #date_start = st.date_input("start date","2015-01-01")
-date_start = st.date_input("start date",datetime.date(2010,1,1))
+date_start = st.date_input("start date",datetime.date(2015,1,1))
 date_end = st.date_input('end date')
 
 data = yf.download(share,start=date_start,end=date_end)
