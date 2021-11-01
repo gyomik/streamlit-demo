@@ -41,6 +41,6 @@ lys=[pdk.Layer('HexagonLayer',data=df,get_position='[lon, lat]',radius=200,eleva
 
 deck = pdk.Deck(map_style='mapbox://styles/mapbox/light-v9',
                 initial_view_state=pdk.ViewState(latitude=37.76,longitude=-122.4,zoom=11,pitch=50),
-                layer = lys)
+                layers = lys)
                 
 st.pydeck_chart(deck)
