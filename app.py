@@ -1,3 +1,5 @@
+# this cool program is output to https://share.streamlit.io/gyomik/streamlit-demo/main/app.py
+
 import pandas as pd
 import yfinance as yf
 import streamlit as st
